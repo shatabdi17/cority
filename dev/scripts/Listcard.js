@@ -7,7 +7,7 @@ class Listcard extends React.Component {
             <React.Fragment>
                 <section className="list-container">
                 <div className="list-container-header">
-                    <p>List Name <span>1</span></p>
+                    <p>List Name <span className="list-number">1</span></p>
                     <p>Total 3</p>
                 </div>
                 <Listitem />
