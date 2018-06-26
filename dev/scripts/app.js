@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Listcard from './Listcard';
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        Hello
+      <React.Fragment>
+      <div className="wrapper">
+       <Listcard />
       </div>
+      </React.Fragment>
     )
   }
 }
