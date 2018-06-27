@@ -1,61 +1,28 @@
 import React from 'react';
-import listCollection from './listCollection.js'
 
 class Listitem extends React.Component {
 
-    // constructor(props) {
-    //     super(props);
-
-    //     this.state = { listItemData: [{
-    //         title: 'Curabitur rutum ut',
-
-    //     }] };
-    // }
-
-
-
     render() {
         return (
-            <React.Fragment>
-                <div className="list-item-container">
-                {/* <div className="list-item-content"> */}
-                   {/* <h3>Curabitur rutum ut</h3>
-                   <p>Vivamus quis enim vitae est</p>
-                   <p>Proin maximus magna accumsan nulla lobortis, nec</p>
-                   <p><i className="far fa-calendar"></i>Wed Jun 13 2018</p>
-                   <div>
-                      <i class="far fa-trash-alt"></i>
-                   </div> */}
-
-                        {listCollection.map((list,id) => {
-                            return (<div className="list-item-content">
-                                {/* <a className="list-item-card"href=""> */}
-                                <div className="list-item-card">
-                                <div>
-                                        <img src={list.picture} />
-                                </div>
-                                <div>
-                                        <h3>{list.title}</h3>
-                                        <p>{list.semiTitle}</p>
-                                        <p> {list.description}</p>
-                                        <p><i className="far fa-calendar"></i>{list.date}</p>
-                                </div>
-                                
-                                </div>                             
-                                <div className="remove-button">
-                                    <a className="remove-icon" href=""><i className="far fa-trash-alt"></i></a>
-                                </div>                               
-                                {/* </a> */}
-                            </div>)
-                        })
-                        }
-
-                 {/* </div> */}
-                
+                <div className="list-item-container">                     
+                    <div className="list-item-content">                     
+                        <div className="list-item-card">                  
+                        <div>
+                            <img src={this.props.list.picture} />
+                        </div>
+                        <div>
+                            <a href="">
+                            <h3>{this.props.list.title}</h3>
+                            <p>{this.props.list.semiTitle}</p>
+                            <p> {this.props.list.description}</p>
+                            <p><i className="far fa-calendar"></i>{this.props.list.date}</p>
+                            </a>
+                        </div>                              
+                        </div>                             
+                    <button className="remove-button" onClick={() => this.props.removeItem(this.props.index)}><i className="far fa-trash-alt"></i></button>
+                    </div>                                     
                 </div>
-            </React.Fragment>
         )
     }
 }
-
 export default Listitem;
