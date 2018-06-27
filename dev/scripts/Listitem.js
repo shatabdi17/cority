@@ -27,15 +27,20 @@ class Listitem extends React.Component {
                       <i class="far fa-trash-alt"></i>
                    </div> */}
 
-                        {listCollection.map((list,i) => {
+                        {listCollection.map((list,id) => {
                             return (<div className="list-item-content">
                                 {/* <a className="list-item-card"href=""> */}
+                                <div className="list-item-card">
                                 <div>
-                                <img src={list.picture} />
-                                <h3>{list.title}</h3>
-                                <p>{list.semiTitle}</p>
-                                <p> {list.description}</p>
-                                <p><i className="far fa-calendar"></i>{list.date}</p>
+                                        <img src={list.picture} />
+                                </div>
+                                <div>
+                                        <h3>{list.title}</h3>
+                                        <p>{list.semiTitle}</p>
+                                        <p> {list.description}</p>
+                                        <p><i className="far fa-calendar"></i>{list.date}</p>
+                                </div>
+                                
                                 </div>                             
                                 <div className="remove-button">
                                     <a className="remove-icon" href=""><i className="far fa-trash-alt"></i></a>
