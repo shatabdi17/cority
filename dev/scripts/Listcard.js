@@ -13,7 +13,7 @@ constructor (props) {
 
     this.removeItem = this.removeItem.bind(this);
     this.toggleList = this.toggleList.bind(this);
- }
+}
 
 removeItem (index) {  
    this.setState({
