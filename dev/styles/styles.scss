@@ -23,11 +23,16 @@ img {
     border: 1px solid $lightgrey;
     border-radius: 10px;
 }
+.list-container-header, .list-item-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .list-container-header,
 .load-more {
     background: $lightgrey;
-    padding: 20px;
+    padding: 20px 30px;
 }
 
 .list-container-header {
@@ -52,10 +57,22 @@ img {
     margin-left: 15px;
 }
 
-.list-item-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.toggle-button {
+    border:none;
+    background: $lightgrey;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    &:hover {
+        box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, .15);
+        background:$lightergrey;
+    }
+    
+}
+
+.fa-caret-down {
+    font-size: 2rem;
 }
 
 .list-item-content {
@@ -145,5 +162,8 @@ img {
     }
     .list-container {
         margin-top: 2px;
+    }
+    .toggle-button {
+        margin-right: -10px;       
     }
 }
