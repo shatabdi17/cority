@@ -5,11 +5,11 @@ import Listcard from './Listcard';
 class App extends React.Component {
   render() {
     return (
-      <React.Fragment>
-      <div className="wrapper">
-       <Listcard />
-      </div>
-      </React.Fragment>
+        <React.Fragment>
+          <div className="wrapper">
+          <Listcard />
+          </div>
+        </React.Fragment>
     )
   }
 }
